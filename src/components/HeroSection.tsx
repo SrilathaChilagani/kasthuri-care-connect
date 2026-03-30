@@ -1,3 +1,4 @@
+import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import { ArrowRight, Clock, Shield, Heart } from "lucide-react";
 import { Button } from "@/components/ui/button";
