@@ -1,8 +1,11 @@
+import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import { ArrowRight, Clock, Shield, Heart } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const HeroSection = () => {
+  const navigate = useNavigate();
+
   return (
     <section id="home" className="relative min-h-screen flex items-center pt-20 overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-background to-secondary" />
@@ -31,7 +34,7 @@ const HeroSection = () => {
             </p>
 
             <div className="flex flex-wrap gap-4 mb-12">
-              <Button size="lg" className="gap-2 font-body">
+              <Button size="lg" className="gap-2 font-body" onClick={() => navigate("/book-appointment")}>
                 Book Appointment <ArrowRight className="w-4 h-4" />
               </Button>
               <Button variant="outline" size="lg" className="font-body">

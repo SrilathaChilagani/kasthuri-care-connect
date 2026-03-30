@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { Menu, X, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
@@ -11,6 +12,7 @@ const navLinks = [
 ];
 
 const Navbar = () => {
+  const navigate = useNavigate();
   const [isOpen, setIsOpen] = useState(false);
 
   return (
@@ -44,7 +46,7 @@ const Navbar = () => {
               <Phone className="w-4 h-4" />
               +91 123 456 7890
             </a>
-            <Button size="sm">Book Appointment</Button>
+            <Button size="sm" onClick={() => navigate("/book-appointment")}>Book Appointment</Button>
           </div>
 
           <button
@@ -68,7 +70,7 @@ const Navbar = () => {
                   {link.label}
                 </a>
               ))}
-              <Button size="sm" className="mt-2 w-fit">Book Appointment</Button>
+              <Button size="sm" className="mt-2 w-fit" onClick={() => { setIsOpen(false); navigate("/book-appointment"); }}>Book Appointment</Button>
             </div>
           </div>
         )}
