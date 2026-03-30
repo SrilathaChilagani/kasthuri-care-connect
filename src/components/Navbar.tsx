@@ -46,7 +46,7 @@ const Navbar = () => {
               <Phone className="w-4 h-4" />
               +91 123 456 7890
             </a>
-            <Button size="sm">Book Appointment</Button>
+            <Button size="sm" onClick={() => navigate("/book-appointment")}>Book Appointment</Button>
           </div>
 
           <button
