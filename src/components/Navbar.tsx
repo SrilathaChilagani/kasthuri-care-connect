@@ -70,7 +70,7 @@ const Navbar = () => {
                   {link.label}
                 </a>
               ))}
-              <Button size="sm" className="mt-2 w-fit">Book Appointment</Button>
+              <Button size="sm" className="mt-2 w-fit" onClick={() => { setIsOpen(false); navigate("/book-appointment"); }}>Book Appointment</Button>
             </div>
           </div>
         )}
