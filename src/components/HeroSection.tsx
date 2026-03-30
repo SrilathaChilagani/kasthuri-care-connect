@@ -34,7 +34,7 @@ const HeroSection = () => {
             </p>
 
             <div className="flex flex-wrap gap-4 mb-12">
-              <Button size="lg" className="gap-2 font-body">
+              <Button size="lg" className="gap-2 font-body" onClick={() => navigate("/book-appointment")}>
                 Book Appointment <ArrowRight className="w-4 h-4" />
               </Button>
               <Button variant="outline" size="lg" className="font-body">
